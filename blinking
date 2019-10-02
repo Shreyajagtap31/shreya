@@ -1,0 +1,17 @@
+import time
+import RPi.GPIO as GPIO       
+GPIO.setmode(GPIO.BOARD)      
+GPIO.setup(11, GPIO.OUT)      
+while True:
+print "enter your choice"
+print ("1: ONN?")
+print ("2: OFF?")
+user = input("Enter ONN or OFF: ") 
+if user== 1:
+ GPIO.output(11,True) 
+ print("LED ONN") 
+ time.sleep(1) 
+if user== 2:   
+ GPIO.output(11,False) 
+ print("LED ONN") 
+ time.sleep(1)  
